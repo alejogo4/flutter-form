@@ -38,6 +38,19 @@ class PollsProvider extends Provider {
     return Response(isSuccess: true, result: Polls.fromJson(decodedJson));
   }
 
+  Future<Response> saveOrUpdatePolls(Polls poll) async {
+    Map<String, String> headers = {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    };
+    var url = Uri.parse(baseUrl + localPath);
+    http.Response response =
+        await http.post(url, body: poll.toJson(), headers: headers);
+
+    return Response(
+        isSuccess: true, result: Polls.fromJson(jsonDecode(response.body)));
+  }
+
   static bool _validToken(Token token) {
     if (DateTime.parse(token.expiration).isAfter(DateTime.now())) {
       return true;
