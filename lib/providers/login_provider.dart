@@ -1,3 +1,5 @@
+import 'package:parcial_final/models/token.dart';
+
 import 'base_provider.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -19,6 +21,8 @@ class LoginProvider extends Provider {
       body: bodyRequest,
     );
 
-    return response;
+    Token token = Token.fromJson(jsonDecode(response.body));
+
+    return token;
   }
 }

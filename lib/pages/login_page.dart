@@ -2,6 +2,7 @@ import 'package:adaptive_dialog/adaptive_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:parcial_final/pages/form_page.dart';
 import 'package:parcial_final/providers/login_provider.dart';
 import 'package:parcial_final/utils/colors.dart';
 
@@ -74,6 +75,10 @@ class _LoginPageState extends State<LoginPage> {
     };
 
     var response = await _loginProvider.googleLogin(request);
+
+    Navigator.pushNamedAndRemoveUntil(
+        context, FormPage.routeName, (route) => false,
+        arguments: {"token": response});
   }
 
   @override

@@ -2,19 +2,19 @@ class Polls {
   Polls({
     required this.id,
     required this.date,
-    required this.email,
-    required this.qualification,
-    required this.theBest,
-    required this.theWorst,
-    required this.remarks,
+    this.email,
+    this.qualification,
+    this.theBest,
+    this.theWorst,
+    this.remarks,
   });
   late final int id;
   late final String date;
-  late final String email;
-  late final int qualification;
-  late final String theBest;
-  late final String theWorst;
-  late final String remarks;
+  late final String? email;
+  late final int? qualification;
+  late final String? theBest;
+  late final String? theWorst;
+  late final String? remarks;
 
   Polls.fromJson(Map<String, dynamic> json) {
     id = json['id'];
