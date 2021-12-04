@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "84427537269",
+    "project_id": "parcialdistribuida",
+    "storage_bucket": "parcialdistribuida.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:84427537269:android:2cda091dd702a9191a313c",
+        "android_client_info": {
+          "package_name": "com.example.parcial_final"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "84427537269-ns7ehg24rs8jjvnschknfa2p7mmgbvr5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.parcial_final",
+            "certificate_hash": "d7a5f2a1cd6bae1b69687b2510d5d20cbdfc1a1d"
+          }
+        },
+        {
+          "client_id": "84427537269-loamkgciaanu0bamsbkgi6vasgi467pm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBa_FOE0laSG3ZNHtxHoCNNwHr4vXlKO4Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "84427537269-loamkgciaanu0bamsbkgi6vasgi467pm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
