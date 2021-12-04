@@ -73,7 +73,7 @@ class _LoginPageState extends State<LoginPage> {
       'photoURL': user.photoUrl,
     };
 
-    await _loginProvider.googleLogin(request);
+    var response = await _loginProvider.googleLogin(request);
   }
 
   @override
