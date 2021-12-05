@@ -2,6 +2,7 @@ import 'package:adaptive_dialog/adaptive_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:parcial_final/components/loader_component.dart';
 import 'package:parcial_final/pages/form_page.dart';
 import 'package:parcial_final/providers/login_provider.dart';
 import 'package:parcial_final/utils/colors.dart';
@@ -117,7 +118,10 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                     SizedBox(height: 20),
-                    _showGoogleLoginButton()
+                    _showGoogleLoginButton(),
+                    _showLoader
+                        ? LoaderComponent(text: 'Por favor espere...')
+                        : Container(),
                   ],
                 ),
               ),
